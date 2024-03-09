@@ -1,20 +1,29 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
+import styles from "./Navbar.module.css";
 
 const Navbar = () => {
+  const [IsNavOpen, setIsNavOpen] = useState(false);
   return (
-    <header>
-      <nav>
-        <Link href="/">
-          <Image
-            src="/logo-bookmark.svg"
-            alt="logo-bookmark "
-            width={148}
-            height={25}
-          />
-        </Link>
-        <ul>
+    <header className={styles.top_header}>
+      <Link href="/">
+        <Image
+          src="/logo-bookmark.svg"
+          alt="logo-bookmark "
+          width={148}
+          height={25}
+          className={styles.logo}
+        />
+      </Link>
+      <nav aria-label="primary-navigation" className={styles.nav}>
+        <ul
+          className={`${styles.links_wrapper} ${
+            IsNavOpen ? styles.open : null
+          }`}
+          onClick={() => setIsNavOpen(!IsNavOpen)}
+        >
           <li>
             <Link href="features">Features</Link>
           </li>
@@ -25,18 +34,32 @@ const Navbar = () => {
             <Link href="contact">Contact</Link>
           </li>
           <li>
-            <Link href="login">Login</Link>
+            <Link className="login btn-secondary" href="login">
+              Login
+            </Link>
           </li>
         </ul>
+        <button
+          className={styles.toggle_nav}
+          onClick={() => setIsNavOpen(!IsNavOpen)}
+        >
+          {IsNavOpen ? (
+            <Image
+              src="/icon-close.svg"
+              alt="icon-close "
+              width={16}
+              height={15}
+            />
+          ) : (
+            <Image
+              src="/icon-hamburger.svg"
+              alt="logo-bookmark "
+              width={19}
+              height={17}
+            />
+          )}
+        </button>
       </nav>
-      <button>
-        <Image
-          src="/icon-hamburger.svg"
-          alt="logo-bookmark "
-          width={18}
-          height={15}
-        />
-      </button>
     </header>
   );
 };

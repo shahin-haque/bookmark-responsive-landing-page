@@ -1,0 +1,49 @@
+.hero_info {
+  display: grid;
+  align-items: center;
+  gap: 1rem;
+}
+.hero_info h1 {
+  font-size: 1.8rem;
+}
+.hero_info p {
+  font-size: 1rem;
+}
+
+.btn_wrapper {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-block: 1rem;
+}
+.third:hover {
+  outline: 1px solid var(--Soft-Red);
+  color: var(--Soft-Red);
+}
+@media screen and (min-width: 48rem) {
+  .hero {
+    text-align: left;
+    display: flex;
+    align-items: center;
+
+    gap: 2rem;
+  }
+  .hero_img {
+    order: 2;
+    flex-basis: 50%;
+  }
+  .hero_info {
+    flex-basis: 50%;
+  }
+  .hero_info h1 {
+    font-size: 3rem;
+  }
+  .hero_info p {
+    font-size: 1.125rem;
+  }
+  .btn_wrapper {
+    justify-content: start;
+  }
+}
