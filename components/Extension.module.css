@@ -1,0 +1,42 @@
+.extension {
+  padding-block: 3rem;
+  display: grid;
+  align-items: center;
+  gap: 2rem;
+}
+
+.extension_icon_wrapper {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+.extension_icon {
+  box-shadow: 4px 4px 14px rgb(208, 208, 208);
+  display: grid;
+  place-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+.extension_head {
+  padding-block: 1rem;
+}
+.extension_head p {
+  padding-block: 1rem;
+}
+
+@media screen and (min-width: 47rem) {
+  .extension_head {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 75rem) {
+  .extension_icon_wrapper div:nth-child(2) {
+    margin-top: 3rem;
+  }
+  .extension_icon_wrapper div:nth-child(3) {
+    margin-top: 6rem;
+  }
+}

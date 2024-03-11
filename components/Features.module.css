@@ -1,0 +1,50 @@
+.features {
+  margin-block: 3rem;
+  padding-inline: 1rem;
+  display: grid;
+  place-items: center;
+
+  gap: 2rem;
+}
+.features div > h3 {
+  padding-block: 2rem;
+}
+.tab_qus > div {
+  border-bottom: 1px solid rgba(209, 209, 209, 0.915);
+  padding: 1rem;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+}
+.tab_qus > div:hover {
+  border-bottom: 2px solid var(--Soft-Red);
+  color: var(--Soft-Red);
+  transition: all 300ms ease-in-out;
+}
+
+.tab_ans img {
+  margin-block: 3rem;
+}
+.tab_ans div h3 {
+  padding-bottom: 1rem;
+}
+.tab_ans div p {
+  padding-block: 1rem;
+}
+/* for tablet and desktop */
+@media screen and (min-width: 47rem) {
+  .features > div {
+    max-width: 480px;
+  }
+  .tab_qus {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .tab_ans {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    text-align: left;
+  }
+}

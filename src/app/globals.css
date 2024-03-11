@@ -67,6 +67,7 @@ h3 {
 }
 p {
   color: var(--Grayish-Blue2);
+  font-size: 1rem;
 }
 a {
   text-decoration: none;
