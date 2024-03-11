@@ -1,19 +1,20 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import styles from "./Footer.module.css";
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className={styles.footer}>
       <nav aria-label="secondary-navigation">
-        <div className="">
+        <div className={styles.footer_links_wrapper}>
           <Link href="/">
             <Image
               src="/logo-bookmark.svg"
               alt="logo-bookmark "
               width={148}
               height={25}
-              className="footer-logo"
+              className={styles.footer_logo}
             />
           </Link>
           <ul>
@@ -31,8 +32,8 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className="social-icon">
-          <Link href="/">
+        <div className={styles.social_icon}>
+          <a href="https://www.facebook.com/" target="blank">
             <Image
               src="/icon-facebook.svg"
               alt="icon-facebook "
@@ -40,8 +41,8 @@ const Footer = () => {
               height={24}
               className="footer-logo"
             />
-          </Link>
-          <Link href="/">
+          </a>
+          <a href="https:/www.twitter.com" target="blank">
             <Image
               src="/icon-twitter.svg"
               alt="icon-twitter "
@@ -49,7 +50,7 @@ const Footer = () => {
               height={20}
               className="footer-logo"
             />
-          </Link>
+          </a>
         </div>
       </nav>
     </footer>
